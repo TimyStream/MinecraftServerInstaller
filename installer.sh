@@ -46,7 +46,7 @@ curl -sO $dwLink
 
 Serverfile=$(basename $dwLink)
 
-echo 'tmux new-session -S "'$svName'" \; split-window -h \; send-keys "./mcserv.sh" C-m' >> startServer.sh
+echo 'tmux new-session -s "'$svName'" \; split-window -h \; send-keys "./mcserv.sh" C-m' >> startServer.sh
 chmod +x startServer.sh
 echo 'java -Xmx'$svRAM'G -jar '$Serverfile' nogui' >> mcserv.sh
 chmod +x mcserv.sh
